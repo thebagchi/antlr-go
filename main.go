@@ -8,12 +8,12 @@ import (
 
 const content = `
 { 
-    "Hello" : "World",
-    "World" : "Hello",
-    "Integer" : 12345,
-    "Boolean" : true,
-    "Null" : null,
-    "Array" : [1,"1", true, false, null]
+    "Hello": "World",
+    "World": "Hello",
+    "Integer": 12345,
+    "Boolean": true,
+    "Null": null,
+    "Array": [1,"1", true, false, null]
 }
 `
 
