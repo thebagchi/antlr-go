@@ -1,169 +1,153 @@
-// Code generated from /Users/sandeep/Workspace/antlr-go/json_parser/json.g4 by ANTLR 4.9.2. DO NOT EDIT.
+// Code generated from json.g4 by ANTLR 4.10.1. DO NOT EDIT.
 
 package json_parser
+
 import (
 	"fmt"
+	"sync"
 	"unicode"
 
 	"github.com/antlr/antlr4/runtime/Go/antlr"
 )
+
 // Suppress unused import error
 var _ = fmt.Printf
+var _ = sync.Once{}
 var _ = unicode.IsLetter
 
-
-var serializedLexerAtn = []uint16{
-	3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 2, 22, 205, 
-	8, 1, 4, 2, 9, 2, 4, 3, 9, 3, 4, 4, 9, 4, 4, 5, 9, 5, 4, 6, 9, 6, 4, 7, 
-	9, 7, 4, 8, 9, 8, 4, 9, 9, 9, 4, 10, 9, 10, 4, 11, 9, 11, 4, 12, 9, 12, 
-	4, 13, 9, 13, 4, 14, 9, 14, 4, 15, 9, 15, 4, 16, 9, 16, 4, 17, 9, 17, 4, 
-	18, 9, 18, 4, 19, 9, 19, 4, 20, 9, 20, 4, 21, 9, 21, 4, 22, 9, 22, 4, 23, 
-	9, 23, 4, 24, 9, 24, 4, 25, 9, 25, 4, 26, 9, 26, 3, 2, 3, 2, 3, 2, 3, 2, 
-	3, 2, 3, 2, 5, 2, 60, 10, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 7, 3, 67, 10, 
-	3, 12, 3, 14, 3, 70, 11, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 3, 77, 10, 
-	3, 3, 4, 3, 4, 3, 4, 3, 4, 3, 4, 7, 4, 84, 10, 4, 12, 4, 14, 4, 87, 11, 
-	4, 3, 4, 3, 4, 3, 4, 3, 4, 3, 4, 5, 4, 94, 10, 4, 3, 5, 3, 5, 3, 6, 3, 
-	6, 3, 7, 3, 7, 5, 7, 102, 10, 7, 3, 8, 3, 8, 3, 9, 3, 9, 3, 9, 3, 9, 3, 
-	10, 3, 10, 3, 10, 3, 10, 3, 10, 3, 11, 3, 11, 3, 11, 3, 11, 3, 11, 3, 11, 
-	3, 12, 3, 12, 3, 12, 3, 12, 3, 12, 3, 13, 3, 13, 3, 14, 3, 14, 3, 15, 3, 
-	15, 3, 16, 3, 16, 3, 17, 3, 17, 3, 18, 3, 18, 3, 19, 3, 19, 3, 19, 7, 19, 
-	141, 10, 19, 12, 19, 14, 19, 144, 11, 19, 5, 19, 146, 10, 19, 3, 20, 3, 
-	20, 5, 20, 150, 10, 20, 3, 20, 3, 20, 3, 21, 3, 21, 3, 21, 5, 21, 157, 
-	10, 21, 3, 22, 3, 22, 3, 22, 3, 22, 3, 22, 3, 22, 3, 23, 3, 23, 3, 24, 
-	5, 24, 168, 10, 24, 3, 24, 3, 24, 3, 24, 6, 24, 173, 10, 24, 13, 24, 14, 
-	24, 174, 3, 24, 5, 24, 178, 10, 24, 3, 24, 5, 24, 181, 10, 24, 3, 24, 3, 
-	24, 5, 24, 185, 10, 24, 5, 24, 187, 10, 24, 3, 25, 3, 25, 3, 25, 7, 25, 
-	192, 10, 25, 12, 25, 14, 25, 195, 11, 25, 3, 25, 3, 25, 3, 26, 6, 26, 200, 
-	10, 26, 13, 26, 14, 26, 201, 3, 26, 3, 26, 2, 2, 27, 3, 3, 5, 4, 7, 5, 
-	9, 6, 11, 7, 13, 8, 15, 9, 17, 10, 19, 11, 21, 12, 23, 13, 25, 14, 27, 
-	15, 29, 16, 31, 17, 33, 18, 35, 19, 37, 2, 39, 2, 41, 2, 43, 2, 45, 2, 
-	47, 20, 49, 21, 51, 22, 3, 2, 10, 3, 2, 51, 59, 3, 2, 50, 59, 4, 2, 71, 
-	71, 103, 103, 4, 2, 45, 45, 47, 47, 10, 2, 36, 36, 49, 49, 94, 94, 100, 
-	100, 104, 104, 112, 112, 116, 116, 118, 118, 5, 2, 50, 59, 67, 72, 99, 
-	104, 4, 2, 36, 36, 94, 94, 5, 2, 11, 12, 15, 15, 34, 34, 2, 222, 2, 3, 
-	3, 2, 2, 2, 2, 5, 3, 2, 2, 2, 2, 7, 3, 2, 2, 2, 2, 9, 3, 2, 2, 2, 2, 11, 
-	3, 2, 2, 2, 2, 13, 3, 2, 2, 2, 2, 15, 3, 2, 2, 2, 2, 17, 3, 2, 2, 2, 2, 
-	19, 3, 2, 2, 2, 2, 21, 3, 2, 2, 2, 2, 23, 3, 2, 2, 2, 2, 25, 3, 2, 2, 2, 
-	2, 27, 3, 2, 2, 2, 2, 29, 3, 2, 2, 2, 2, 31, 3, 2, 2, 2, 2, 33, 3, 2, 2, 
-	2, 2, 35, 3, 2, 2, 2, 2, 47, 3, 2, 2, 2, 2, 49, 3, 2, 2, 2, 2, 51, 3, 2, 
-	2, 2, 3, 59, 3, 2, 2, 2, 5, 76, 3, 2, 2, 2, 7, 93, 3, 2, 2, 2, 9, 95, 3, 
-	2, 2, 2, 11, 97, 3, 2, 2, 2, 13, 101, 3, 2, 2, 2, 15, 103, 3, 2, 2, 2, 
-	17, 105, 3, 2, 2, 2, 19, 109, 3, 2, 2, 2, 21, 114, 3, 2, 2, 2, 23, 120, 
-	3, 2, 2, 2, 25, 125, 3, 2, 2, 2, 27, 127, 3, 2, 2, 2, 29, 129, 3, 2, 2, 
-	2, 31, 131, 3, 2, 2, 2, 33, 133, 3, 2, 2, 2, 35, 135, 3, 2, 2, 2, 37, 145, 
-	3, 2, 2, 2, 39, 147, 3, 2, 2, 2, 41, 153, 3, 2, 2, 2, 43, 158, 3, 2, 2, 
-	2, 45, 164, 3, 2, 2, 2, 47, 186, 3, 2, 2, 2, 49, 188, 3, 2, 2, 2, 51, 199, 
-	3, 2, 2, 2, 53, 60, 5, 5, 3, 2, 54, 60, 5, 7, 4, 2, 55, 60, 5, 9, 5, 2, 
-	56, 60, 5, 11, 6, 2, 57, 60, 5, 13, 7, 2, 58, 60, 5, 15, 8, 2, 59, 53, 
-	3, 2, 2, 2, 59, 54, 3, 2, 2, 2, 59, 55, 3, 2, 2, 2, 59, 56, 3, 2, 2, 2, 
-	59, 57, 3, 2, 2, 2, 59, 58, 3, 2, 2, 2, 60, 4, 3, 2, 2, 2, 61, 62, 5, 25, 
-	13, 2, 62, 68, 5, 17, 9, 2, 63, 64, 5, 35, 18, 2, 64, 65, 5, 17, 9, 2, 
-	65, 67, 3, 2, 2, 2, 66, 63, 3, 2, 2, 2, 67, 70, 3, 2, 2, 2, 68, 66, 3, 
-	2, 2, 2, 68, 69, 3, 2, 2, 2, 69, 71, 3, 2, 2, 2, 70, 68, 3, 2, 2, 2, 71, 
-	72, 5, 27, 14, 2, 72, 77, 3, 2, 2, 2, 73, 74, 5, 25, 13, 2, 74, 75, 5, 
-	27, 14, 2, 75, 77, 3, 2, 2, 2, 76, 61, 3, 2, 2, 2, 76, 73, 3, 2, 2, 2, 
-	77, 6, 3, 2, 2, 2, 78, 79, 5, 29, 15, 2, 79, 85, 5, 3, 2, 2, 80, 81, 5, 
-	35, 18, 2, 81, 82, 5, 3, 2, 2, 82, 84, 3, 2, 2, 2, 83, 80, 3, 2, 2, 2, 
-	84, 87, 3, 2, 2, 2, 85, 83, 3, 2, 2, 2, 85, 86, 3, 2, 2, 2, 86, 88, 3, 
-	2, 2, 2, 87, 85, 3, 2, 2, 2, 88, 89, 5, 31, 16, 2, 89, 94, 3, 2, 2, 2, 
-	90, 91, 5, 29, 15, 2, 91, 92, 5, 31, 16, 2, 92, 94, 3, 2, 2, 2, 93, 78, 
-	3, 2, 2, 2, 93, 90, 3, 2, 2, 2, 94, 8, 3, 2, 2, 2, 95, 96, 5, 49, 25, 2, 
-	96, 10, 3, 2, 2, 2, 97, 98, 5, 47, 24, 2, 98, 12, 3, 2, 2, 2, 99, 102, 
-	5, 19, 10, 2, 100, 102, 5, 21, 11, 2, 101, 99, 3, 2, 2, 2, 101, 100, 3, 
-	2, 2, 2, 102, 14, 3, 2, 2, 2, 103, 104, 5, 23, 12, 2, 104, 16, 3, 2, 2, 
-	2, 105, 106, 5, 49, 25, 2, 106, 107, 5, 33, 17, 2, 107, 108, 5, 3, 2, 2, 
-	108, 18, 3, 2, 2, 2, 109, 110, 7, 118, 2, 2, 110, 111, 7, 116, 2, 2, 111, 
-	112, 7, 119, 2, 2, 112, 113, 7, 103, 2, 2, 113, 20, 3, 2, 2, 2, 114, 115, 
-	7, 104, 2, 2, 115, 116, 7, 99, 2, 2, 116, 117, 7, 110, 2, 2, 117, 118, 
-	7, 117, 2, 2, 118, 119, 7, 103, 2, 2, 119, 22, 3, 2, 2, 2, 120, 121, 7, 
-	112, 2, 2, 121, 122, 7, 119, 2, 2, 122, 123, 7, 110, 2, 2, 123, 124, 7, 
-	110, 2, 2, 124, 24, 3, 2, 2, 2, 125, 126, 7, 125, 2, 2, 126, 26, 3, 2, 
-	2, 2, 127, 128, 7, 127, 2, 2, 128, 28, 3, 2, 2, 2, 129, 130, 7, 93, 2, 
-	2, 130, 30, 3, 2, 2, 2, 131, 132, 7, 95, 2, 2, 132, 32, 3, 2, 2, 2, 133, 
-	134, 7, 60, 2, 2, 134, 34, 3, 2, 2, 2, 135, 136, 7, 46, 2, 2, 136, 36, 
-	3, 2, 2, 2, 137, 146, 7, 50, 2, 2, 138, 142, 9, 2, 2, 2, 139, 141, 9, 3, 
-	2, 2, 140, 139, 3, 2, 2, 2, 141, 144, 3, 2, 2, 2, 142, 140, 3, 2, 2, 2, 
-	142, 143, 3, 2, 2, 2, 143, 146, 3, 2, 2, 2, 144, 142, 3, 2, 2, 2, 145, 
-	137, 3, 2, 2, 2, 145, 138, 3, 2, 2, 2, 146, 38, 3, 2, 2, 2, 147, 149, 9, 
-	4, 2, 2, 148, 150, 9, 5, 2, 2, 149, 148, 3, 2, 2, 2, 149, 150, 3, 2, 2, 
-	2, 150, 151, 3, 2, 2, 2, 151, 152, 5, 37, 19, 2, 152, 40, 3, 2, 2, 2, 153, 
-	156, 7, 94, 2, 2, 154, 157, 9, 6, 2, 2, 155, 157, 5, 43, 22, 2, 156, 154, 
-	3, 2, 2, 2, 156, 155, 3, 2, 2, 2, 157, 42, 3, 2, 2, 2, 158, 159, 7, 119, 
-	2, 2, 159, 160, 5, 45, 23, 2, 160, 161, 5, 45, 23, 2, 161, 162, 5, 45, 
-	23, 2, 162, 163, 5, 45, 23, 2, 163, 44, 3, 2, 2, 2, 164, 165, 9, 7, 2, 
-	2, 165, 46, 3, 2, 2, 2, 166, 168, 7, 47, 2, 2, 167, 166, 3, 2, 2, 2, 167, 
-	168, 3, 2, 2, 2, 168, 169, 3, 2, 2, 2, 169, 170, 5, 37, 19, 2, 170, 172, 
-	7, 48, 2, 2, 171, 173, 9, 3, 2, 2, 172, 171, 3, 2, 2, 2, 173, 174, 3, 2, 
-	2, 2, 174, 172, 3, 2, 2, 2, 174, 175, 3, 2, 2, 2, 175, 177, 3, 2, 2, 2, 
-	176, 178, 5, 39, 20, 2, 177, 176, 3, 2, 2, 2, 177, 178, 3, 2, 2, 2, 178, 
-	187, 3, 2, 2, 2, 179, 181, 7, 47, 2, 2, 180, 179, 3, 2, 2, 2, 180, 181, 
-	3, 2, 2, 2, 181, 182, 3, 2, 2, 2, 182, 184, 5, 37, 19, 2, 183, 185, 5, 
-	39, 20, 2, 184, 183, 3, 2, 2, 2, 184, 185, 3, 2, 2, 2, 185, 187, 3, 2, 
-	2, 2, 186, 167, 3, 2, 2, 2, 186, 180, 3, 2, 2, 2, 187, 48, 3, 2, 2, 2, 
-	188, 193, 7, 36, 2, 2, 189, 192, 5, 41, 21, 2, 190, 192, 10, 8, 2, 2, 191, 
-	189, 3, 2, 2, 2, 191, 190, 3, 2, 2, 2, 192, 195, 3, 2, 2, 2, 193, 191, 
-	3, 2, 2, 2, 193, 194, 3, 2, 2, 2, 194, 196, 3, 2, 2, 2, 195, 193, 3, 2, 
-	2, 2, 196, 197, 7, 36, 2, 2, 197, 50, 3, 2, 2, 2, 198, 200, 9, 9, 2, 2, 
-	199, 198, 3, 2, 2, 2, 200, 201, 3, 2, 2, 2, 201, 199, 3, 2, 2, 2, 201, 
-	202, 3, 2, 2, 2, 202, 203, 3, 2, 2, 2, 203, 204, 8, 26, 2, 2, 204, 52, 
-	3, 2, 2, 2, 22, 2, 59, 68, 76, 85, 93, 101, 142, 145, 149, 156, 167, 174, 
-	177, 180, 184, 186, 191, 193, 201, 3, 8, 2, 2,
-}
-
-var lexerChannelNames = []string{
-	"DEFAULT_TOKEN_CHANNEL", "HIDDEN",
-}
-
-var lexerModeNames = []string{
-	"DEFAULT_MODE",
-}
-
-var lexerLiteralNames = []string{
-	"", "", "", "", "", "", "", "", "", "'true'", "'false'", "'null'", "'{'", 
-	"'}'", "'['", "']'", "':'", "','",
-}
-
-var lexerSymbolicNames = []string{
-	"", "Value", "Dict", "List", "String", "Number", "Boolean", "Null", "Pair", 
-	"TRUE_SYM", "FALSE_SYM", "NULL_SYM", "CURLY_START", "CURLY_END", "SQUARE_START", 
-	"SQUARE_END", "COLON", "COMMA", "NUMBER", "STRING", "WHITESPACE",
-}
-
-var lexerRuleNames = []string{
-	"Value", "Dict", "List", "String", "Number", "Boolean", "Null", "Pair", 
-	"TRUE_SYM", "FALSE_SYM", "NULL_SYM", "CURLY_START", "CURLY_END", "SQUARE_START", 
-	"SQUARE_END", "COLON", "COMMA", "INT", "EXP", "ESC", "UNICODE", "HEX", 
-	"NUMBER", "STRING", "WHITESPACE",
-}
 type jsonLexer struct {
 	*antlr.BaseLexer
 	channelNames []string
-	modeNames []string
+	modeNames    []string
 	// TODO: EOF string
 }
 
-// NewjsonLexer produces a new lexer instance for the optional input antlr.CharStream.
-//
-// The *jsonLexer instance produced may be reused by calling the SetInputStream method.
-// The initial lexer configuration is expensive to construct, and the object is not thread-safe;
-// however, if used within a Golang sync.Pool, the construction cost amortizes well and the
-// objects can be used in a thread-safe manner.
-func NewjsonLexer(input antlr.CharStream) *jsonLexer {
-	l := new(jsonLexer)
-	lexerDeserializer := antlr.NewATNDeserializer(nil)
-	lexerAtn := lexerDeserializer.DeserializeFromUInt16(serializedLexerAtn)
-	lexerDecisionToDFA := make([]*antlr.DFA, len(lexerAtn.DecisionToState))
-	for index, ds := range lexerAtn.DecisionToState {
-		lexerDecisionToDFA[index] = antlr.NewDFA(ds, index)
-	}
-	l.BaseLexer = antlr.NewBaseLexer(input)
-	l.Interpreter = antlr.NewLexerATNSimulator(l, lexerAtn, lexerDecisionToDFA, antlr.NewPredictionContextCache())
+var jsonlexerLexerStaticData struct {
+	once                   sync.Once
+	serializedATN          []int32
+	channelNames           []string
+	modeNames              []string
+	literalNames           []string
+	symbolicNames          []string
+	ruleNames              []string
+	predictionContextCache *antlr.PredictionContextCache
+	atn                    *antlr.ATN
+	decisionToDFA          []*antlr.DFA
+}
 
-	l.channelNames = lexerChannelNames
-	l.modeNames = lexerModeNames
-	l.RuleNames = lexerRuleNames
-	l.LiteralNames = lexerLiteralNames
-	l.SymbolicNames = lexerSymbolicNames
+func jsonlexerLexerInit() {
+	staticData := &jsonlexerLexerStaticData
+	staticData.channelNames = []string{
+		"DEFAULT_TOKEN_CHANNEL", "HIDDEN",
+	}
+	staticData.modeNames = []string{
+		"DEFAULT_MODE",
+	}
+	staticData.literalNames = []string{
+		"", "'true'", "'false'", "'null'", "'{'", "'}'", "':'", "'['", "']'",
+		"','",
+	}
+	staticData.symbolicNames = []string{
+		"", "", "", "", "CURLY_START", "CURLY_END", "COLON", "SQUARE_START",
+		"SQUARE_END", "COMMA", "STRING", "NUMBER", "WHITESPACE",
+	}
+	staticData.ruleNames = []string{
+		"T__0", "T__1", "T__2", "CURLY_START", "CURLY_END", "COLON", "SQUARE_START",
+		"SQUARE_END", "COMMA", "STRING", "ESC", "UNICODE", "HEX", "SAFECODEPOINT",
+		"NUMBER", "INT", "EXP", "WHITESPACE",
+	}
+	staticData.predictionContextCache = antlr.NewPredictionContextCache()
+	staticData.serializedATN = []int32{
+		4, 0, 12, 128, 6, -1, 2, 0, 7, 0, 2, 1, 7, 1, 2, 2, 7, 2, 2, 3, 7, 3, 2,
+		4, 7, 4, 2, 5, 7, 5, 2, 6, 7, 6, 2, 7, 7, 7, 2, 8, 7, 8, 2, 9, 7, 9, 2,
+		10, 7, 10, 2, 11, 7, 11, 2, 12, 7, 12, 2, 13, 7, 13, 2, 14, 7, 14, 2, 15,
+		7, 15, 2, 16, 7, 16, 2, 17, 7, 17, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1,
+		1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 3, 1, 3,
+		1, 4, 1, 4, 1, 5, 1, 5, 1, 6, 1, 6, 1, 7, 1, 7, 1, 8, 1, 8, 1, 9, 1, 9,
+		1, 9, 5, 9, 69, 8, 9, 10, 9, 12, 9, 72, 9, 9, 1, 9, 1, 9, 1, 10, 1, 10,
+		1, 10, 3, 10, 79, 8, 10, 1, 11, 1, 11, 1, 11, 1, 11, 1, 11, 1, 11, 1, 12,
+		1, 12, 1, 13, 1, 13, 1, 14, 3, 14, 92, 8, 14, 1, 14, 1, 14, 1, 14, 4, 14,
+		97, 8, 14, 11, 14, 12, 14, 98, 3, 14, 101, 8, 14, 1, 14, 3, 14, 104, 8,
+		14, 1, 15, 1, 15, 1, 15, 5, 15, 109, 8, 15, 10, 15, 12, 15, 112, 9, 15,
+		3, 15, 114, 8, 15, 1, 16, 1, 16, 3, 16, 118, 8, 16, 1, 16, 1, 16, 1, 17,
+		4, 17, 123, 8, 17, 11, 17, 12, 17, 124, 1, 17, 1, 17, 0, 0, 18, 1, 1, 3,
+		2, 5, 3, 7, 4, 9, 5, 11, 6, 13, 7, 15, 8, 17, 9, 19, 10, 21, 0, 23, 0,
+		25, 0, 27, 0, 29, 11, 31, 0, 33, 0, 35, 12, 1, 0, 8, 8, 0, 34, 34, 47,
+		47, 92, 92, 98, 98, 102, 102, 110, 110, 114, 114, 116, 116, 3, 0, 48, 57,
+		65, 70, 97, 102, 3, 0, 0, 31, 34, 34, 92, 92, 1, 0, 48, 57, 1, 0, 49, 57,
+		2, 0, 69, 69, 101, 101, 2, 0, 43, 43, 45, 45, 3, 0, 9, 10, 13, 13, 32,
+		32, 132, 0, 1, 1, 0, 0, 0, 0, 3, 1, 0, 0, 0, 0, 5, 1, 0, 0, 0, 0, 7, 1,
+		0, 0, 0, 0, 9, 1, 0, 0, 0, 0, 11, 1, 0, 0, 0, 0, 13, 1, 0, 0, 0, 0, 15,
+		1, 0, 0, 0, 0, 17, 1, 0, 0, 0, 0, 19, 1, 0, 0, 0, 0, 29, 1, 0, 0, 0, 0,
+		35, 1, 0, 0, 0, 1, 37, 1, 0, 0, 0, 3, 42, 1, 0, 0, 0, 5, 48, 1, 0, 0, 0,
+		7, 53, 1, 0, 0, 0, 9, 55, 1, 0, 0, 0, 11, 57, 1, 0, 0, 0, 13, 59, 1, 0,
+		0, 0, 15, 61, 1, 0, 0, 0, 17, 63, 1, 0, 0, 0, 19, 65, 1, 0, 0, 0, 21, 75,
+		1, 0, 0, 0, 23, 80, 1, 0, 0, 0, 25, 86, 1, 0, 0, 0, 27, 88, 1, 0, 0, 0,
+		29, 91, 1, 0, 0, 0, 31, 113, 1, 0, 0, 0, 33, 115, 1, 0, 0, 0, 35, 122,
+		1, 0, 0, 0, 37, 38, 5, 116, 0, 0, 38, 39, 5, 114, 0, 0, 39, 40, 5, 117,
+		0, 0, 40, 41, 5, 101, 0, 0, 41, 2, 1, 0, 0, 0, 42, 43, 5, 102, 0, 0, 43,
+		44, 5, 97, 0, 0, 44, 45, 5, 108, 0, 0, 45, 46, 5, 115, 0, 0, 46, 47, 5,
+		101, 0, 0, 47, 4, 1, 0, 0, 0, 48, 49, 5, 110, 0, 0, 49, 50, 5, 117, 0,
+		0, 50, 51, 5, 108, 0, 0, 51, 52, 5, 108, 0, 0, 52, 6, 1, 0, 0, 0, 53, 54,
+		5, 123, 0, 0, 54, 8, 1, 0, 0, 0, 55, 56, 5, 125, 0, 0, 56, 10, 1, 0, 0,
+		0, 57, 58, 5, 58, 0, 0, 58, 12, 1, 0, 0, 0, 59, 60, 5, 91, 0, 0, 60, 14,
+		1, 0, 0, 0, 61, 62, 5, 93, 0, 0, 62, 16, 1, 0, 0, 0, 63, 64, 5, 44, 0,
+		0, 64, 18, 1, 0, 0, 0, 65, 70, 5, 34, 0, 0, 66, 69, 3, 21, 10, 0, 67, 69,
+		3, 27, 13, 0, 68, 66, 1, 0, 0, 0, 68, 67, 1, 0, 0, 0, 69, 72, 1, 0, 0,
+		0, 70, 68, 1, 0, 0, 0, 70, 71, 1, 0, 0, 0, 71, 73, 1, 0, 0, 0, 72, 70,
+		1, 0, 0, 0, 73, 74, 5, 34, 0, 0, 74, 20, 1, 0, 0, 0, 75, 78, 5, 92, 0,
+		0, 76, 79, 7, 0, 0, 0, 77, 79, 3, 23, 11, 0, 78, 76, 1, 0, 0, 0, 78, 77,
+		1, 0, 0, 0, 79, 22, 1, 0, 0, 0, 80, 81, 5, 117, 0, 0, 81, 82, 3, 25, 12,
+		0, 82, 83, 3, 25, 12, 0, 83, 84, 3, 25, 12, 0, 84, 85, 3, 25, 12, 0, 85,
+		24, 1, 0, 0, 0, 86, 87, 7, 1, 0, 0, 87, 26, 1, 0, 0, 0, 88, 89, 8, 2, 0,
+		0, 89, 28, 1, 0, 0, 0, 90, 92, 5, 45, 0, 0, 91, 90, 1, 0, 0, 0, 91, 92,
+		1, 0, 0, 0, 92, 93, 1, 0, 0, 0, 93, 100, 3, 31, 15, 0, 94, 96, 5, 46, 0,
+		0, 95, 97, 7, 3, 0, 0, 96, 95, 1, 0, 0, 0, 97, 98, 1, 0, 0, 0, 98, 96,
+		1, 0, 0, 0, 98, 99, 1, 0, 0, 0, 99, 101, 1, 0, 0, 0, 100, 94, 1, 0, 0,
+		0, 100, 101, 1, 0, 0, 0, 101, 103, 1, 0, 0, 0, 102, 104, 3, 33, 16, 0,
+		103, 102, 1, 0, 0, 0, 103, 104, 1, 0, 0, 0, 104, 30, 1, 0, 0, 0, 105, 114,
+		5, 48, 0, 0, 106, 110, 7, 4, 0, 0, 107, 109, 7, 3, 0, 0, 108, 107, 1, 0,
+		0, 0, 109, 112, 1, 0, 0, 0, 110, 108, 1, 0, 0, 0, 110, 111, 1, 0, 0, 0,
+		111, 114, 1, 0, 0, 0, 112, 110, 1, 0, 0, 0, 113, 105, 1, 0, 0, 0, 113,
+		106, 1, 0, 0, 0, 114, 32, 1, 0, 0, 0, 115, 117, 7, 5, 0, 0, 116, 118, 7,
+		6, 0, 0, 117, 116, 1, 0, 0, 0, 117, 118, 1, 0, 0, 0, 118, 119, 1, 0, 0,
+		0, 119, 120, 3, 31, 15, 0, 120, 34, 1, 0, 0, 0, 121, 123, 7, 7, 0, 0, 122,
+		121, 1, 0, 0, 0, 123, 124, 1, 0, 0, 0, 124, 122, 1, 0, 0, 0, 124, 125,
+		1, 0, 0, 0, 125, 126, 1, 0, 0, 0, 126, 127, 6, 17, 0, 0, 127, 36, 1, 0,
+		0, 0, 12, 0, 68, 70, 78, 91, 98, 100, 103, 110, 113, 117, 124, 1, 6, 0,
+		0,
+	}
+	deserializer := antlr.NewATNDeserializer(nil)
+	staticData.atn = deserializer.Deserialize(staticData.serializedATN)
+	atn := staticData.atn
+	staticData.decisionToDFA = make([]*antlr.DFA, len(atn.DecisionToState))
+	decisionToDFA := staticData.decisionToDFA
+	for index, state := range atn.DecisionToState {
+		decisionToDFA[index] = antlr.NewDFA(state, index)
+	}
+}
+
+// jsonLexerInit initializes any static state used to implement jsonLexer. By default the
+// static state used to implement the lexer is lazily initialized during the first call to
+// NewjsonLexer(). You can call this function if you wish to initialize the static state ahead
+// of time.
+func JsonLexerInit() {
+	staticData := &jsonlexerLexerStaticData
+	staticData.once.Do(jsonlexerLexerInit)
+}
+
+// NewjsonLexer produces a new lexer instance for the optional input antlr.CharStream.
+func NewjsonLexer(input antlr.CharStream) *jsonLexer {
+	JsonLexerInit()
+	l := new(jsonLexer)
+	l.BaseLexer = antlr.NewBaseLexer(input)
+	staticData := &jsonlexerLexerStaticData
+	l.Interpreter = antlr.NewLexerATNSimulator(l, staticData.atn, staticData.decisionToDFA, staticData.predictionContextCache)
+	l.channelNames = staticData.channelNames
+	l.modeNames = staticData.modeNames
+	l.RuleNames = staticData.ruleNames
+	l.LiteralNames = staticData.literalNames
+	l.SymbolicNames = staticData.symbolicNames
 	l.GrammarFileName = "json.g4"
 	// TODO: l.EOF = antlr.TokenEOF
 
@@ -172,25 +156,16 @@ func NewjsonLexer(input antlr.CharStream) *jsonLexer {
 
 // jsonLexer tokens.
 const (
-	jsonLexerValue = 1
-	jsonLexerDict = 2
-	jsonLexerList = 3
-	jsonLexerString = 4
-	jsonLexerNumber = 5
-	jsonLexerBoolean = 6
-	jsonLexerNull = 7
-	jsonLexerPair = 8
-	jsonLexerTRUE_SYM = 9
-	jsonLexerFALSE_SYM = 10
-	jsonLexerNULL_SYM = 11
-	jsonLexerCURLY_START = 12
-	jsonLexerCURLY_END = 13
-	jsonLexerSQUARE_START = 14
-	jsonLexerSQUARE_END = 15
-	jsonLexerCOLON = 16
-	jsonLexerCOMMA = 17
-	jsonLexerNUMBER = 18
-	jsonLexerSTRING = 19
-	jsonLexerWHITESPACE = 20
+	jsonLexerT__0         = 1
+	jsonLexerT__1         = 2
+	jsonLexerT__2         = 3
+	jsonLexerCURLY_START  = 4
+	jsonLexerCURLY_END    = 5
+	jsonLexerCOLON        = 6
+	jsonLexerSQUARE_START = 7
+	jsonLexerSQUARE_END   = 8
+	jsonLexerCOMMA        = 9
+	jsonLexerSTRING       = 10
+	jsonLexerNUMBER       = 11
+	jsonLexerWHITESPACE   = 12
 )
-

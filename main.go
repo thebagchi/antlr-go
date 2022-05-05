@@ -17,7 +17,7 @@ const content = `
 }
 `
 
-func main() {
+func Tokenize() {
 	var (
 		is    = antlr.NewInputStream(content)
 		lexer = json_parser.NewjsonLexer(is)
@@ -29,4 +29,21 @@ func main() {
 		}
 		fmt.Println(fmt.Sprintf("%s (%q)", lexer.SymbolicNames[t.GetTokenType()], t.GetText()))
 	}
+}
+
+func Parse() {
+	var (
+		is     = antlr.NewInputStream(content)
+		lexer  = json_parser.NewjsonLexer(is)
+		tokens = antlr.NewCommonTokenStream(lexer, antlr.TokenDefaultChannel)
+		parser = json_parser.NewjsonParser(tokens)
+	)
+	parser.Start()
+	// TODO - Listener
+	// TODO - Visitor
+}
+
+func main() {
+	Tokenize()
+	Parse()
 }
