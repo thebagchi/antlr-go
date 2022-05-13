@@ -36,6 +36,7 @@ ruleModuleDefinition
 ruleModuleReference
   : UCASE_ID
   | LCASE_ID
+  | CAPS_ID
   ;
 
 ruleModuleIdentifier
@@ -95,6 +96,7 @@ ruleIRIValue
 
 ruleEncodingReferenceDefault
   : UCASE_ID INSTRUCTIONS_SYM
+  | CAPS_ID INSTRUCTIONS_SYM
   | /* EMPTY */
   ;
 
@@ -150,6 +152,7 @@ ruleIdentifier
 
 ruleTypeReference
   : UCASE_ID
+  | CAPS_ID
   ;
 
 ruleValueReference
@@ -162,10 +165,12 @@ ruleObjectReference
 
 ruleObjectClassReference
   : UCASE_ID
+  | CAPS_ID
   ;
 
 ruleObjectSetReference
   : UCASE_ID
+  | CAPS_ID
   ;
 
 ruleParameterizedReference
@@ -195,6 +200,7 @@ ruleExternalObjectSetReference
 
 ruleTypeFieldReference
   : AND UCASE_ID
+  | AND CAPS_ID
   ;
 
 ruleValueFieldReference
@@ -203,6 +209,7 @@ ruleValueFieldReference
 
 ruleValueSetFieldReference
   : AND UCASE_ID
+  | AND CAPS_ID
   ;
 
 ruleObjectFieldReference
@@ -211,6 +218,7 @@ ruleObjectFieldReference
 
 ruleObjectSetFieldReference
   : AND UCASE_ID
+  | AND CAPS_ID
   ;
 
 ruleUsefulObjectClassReference
@@ -494,6 +502,7 @@ ruleOptionalExtensionMarker
 
 ruleEncodingReference
   : UCASE_ID COLON
+  | CAPS_ID COLON
   | /* EMPTY */
   ;
 
@@ -512,6 +521,7 @@ ruleClassNumber
 ruleEncodingInstruction
   : LCASE_ID
   | UCASE_ID
+  | CAPS_ID
   ;
 
 ruleTag
@@ -1067,10 +1077,8 @@ ruleLiteral
   | COMMA
   ;
 
-// TODO: Note this rule might require more tokens handling
 ruleWord
-  : LCASE_ID
-  | UCASE_ID
+  : CAPS_ID
   ;
 
 ruleFieldSettingList
@@ -1809,9 +1817,9 @@ WHITESPACE
   : ( '\t' | ' ' | '\r' | '\n'| '\u000C' )+ -> channel(HIDDEN)
   ;
 
-//CAPS_ID
-//  : (UC_LETTER) (UC_LETTER | DIGIT | HYPHEN)*
-//  ;
+CAPS_ID
+  : (UC_LETTER) (UC_LETTER | DIGIT | HYPHEN)*
+  ;
 
 UCASE_ID
   : (UC_LETTER) (LC_LETTER | UC_LETTER | DIGIT | HYPHEN)*
